@@ -1,0 +1,9 @@
+@mixin displayFlex ($display, $align, $justify, $direction: row, $wrap: wrap) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+// @include displayFlex(flex, center, space-between);

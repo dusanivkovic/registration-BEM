@@ -1,0 +1,13 @@
+.video-description {
+    margin: $default-gap 0;
+    padding: $default-gap 0;
+    border: {
+        top: 1px solid $border-input;
+        bottom: 1px solid $border-input;
+    }
+
+    .video-description-header {
+        align-items: flex-start;
+        margin-bottom: $default-gap;
+    }
+}

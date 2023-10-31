@@ -1,0 +1,42 @@
+.button-accent {
+    padding: 10px $default-gap;
+    background-color: $accent;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $font-color-light;
+}
+
+.button-round {
+    @include displayFlex(flex, center, center);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $background-color-medium;
+}
+
+.button-action {
+    @include displayFlex(flex, center, flex-start);
+    padding: 10px;
+
+    .button-action__icon {
+        font-size: 24px;
+    }
+
+    .button-action__text {
+        padding-left: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    &.small {
+        .button-action__icon {
+            font-size: 15px;
+        }
+
+        .button-action__text {
+            font-size: 12px;
+            color: $font-color-dark;
+        }
+    }
+}

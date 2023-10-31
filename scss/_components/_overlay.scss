@@ -1,0 +1,6 @@
+.a-overlay {
+    @include position(absolute, 0, 0, 0, 0);
+
+    // background: rgba($black, .8);
+    z-index: 0;
+}

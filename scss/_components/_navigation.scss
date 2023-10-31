@@ -1,0 +1,10 @@
+.main-navigation {
+    display: flex;
+
+    .main-navigation__home-link {
+        display: inline-block;
+        width: 90px;
+        height: 20px;
+        margin: 0 $default-gap;
+    }
+}

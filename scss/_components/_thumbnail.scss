@@ -1,0 +1,41 @@
+.thumbnail {
+    position: relative;
+
+    .thumbnail__image {
+        height: 100%;
+    }
+
+    .thumbnail__time {
+        @include position(absolute, unset, 5px, 5px, unset);
+        display: block;
+        padding: 2px 5px;
+        font-size: 12px;
+        background-color: rgba($primary, .8);
+        color: $font-color-light;
+        font-weight: 600;
+    }
+
+    .thumbnail__radio {
+        @include position(absolute, unset, 0, 0, 0);
+        padding: 2px 0;
+        background-color: rgba($background-color-dark, .8);
+        font-size: 20px;
+        color: $font-color-light;
+        text-align: center;
+    }
+
+    &.playlist {
+        display: flex;
+
+        .thumbnail__image {
+            width: 65%;
+        }
+
+        .thumbnail__playlist {
+            @include displayFlex(flex, center, center, column);
+            width: 100%;
+            background-color: $background-color-dark;
+            color: $font-color-light;
+        }
+    }
+}

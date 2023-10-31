@@ -1,0 +1,20 @@
+.align-center {
+    @include displayFlex(flex, center, flex-start);
+}
+
+.space-between {
+    @include displayFlex(flex, center, space-between);
+}
+
+.absolute-center {
+    @include displayFlex(flex, center, center);
+}
+
+.absolute-center-direction-col {
+    @include displayFlex(flex, center, center, column)
+}
+
+.position-absolute-center {
+    @include position (absolute, 50%, 0, 0, 50%);
+    transform: translate(-50%, -50%);
+}

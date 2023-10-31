@@ -1,0 +1,38 @@
+$tag-background-color: #ececec;
+
+.tag {
+    display: inline-block;
+    min-width: 12px;
+    height: 32px;
+    padding: 3px $default-gap;
+    border-radius: 16px;
+    border: 1px solid $border-input;
+    background-color: $tag-background-color;
+    text-align: center;
+    color: $primary;
+    cursor: pointer;
+
+    &._selected {
+        border-color: $primary;
+        background-color: $primary;
+        color: $font-color-light;
+    }
+}
+
+.tag-slider {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+
+    .tag-slider__item {
+        margin-right: 10px;
+    }
+
+    .tag-slider__next-button {
+        position: absolute;
+        right: 0;
+        padding: 3px;
+        background-color: $background-color-medium;
+        cursor: pointer;
+    }
+}

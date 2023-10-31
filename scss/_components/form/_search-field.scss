@@ -1,0 +1,26 @@
+$search-button-width: 64px;
+
+.search-field {
+    .search-field__input,
+    .search-field__button {
+        height: 40px;
+    }
+
+    .search-field__input {
+        width: calc(100% - #{$search-button-width});
+        padding: 2px 6px;
+        border: 1px solid $border-input;
+        border-right: 0;
+
+        &::placeholder {
+            color: $font-color-medium;
+        }
+    }
+
+    .search-field__button {
+        width: $search-button-width;
+        border: 1px solid $border-input;
+        border-radius: 0 2px 2px 0;
+        background-color: $background-color-medium;
+    }
+}

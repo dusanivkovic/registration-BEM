@@ -1,0 +1,24 @@
+.user-block {
+    display: flex;
+
+    .content {
+        margin: {
+            top: 5px;
+            left: $default-gap;
+        }
+    }
+
+    .header {
+        margin-bottom: $default-gap;
+    }
+
+    .title,
+    .text {
+        font-size: 14px;
+    }
+
+    .title {
+        font-weight: 600;
+        color: $primary;
+    }
+}

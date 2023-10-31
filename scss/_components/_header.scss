@@ -1,0 +1,26 @@
+.main-header {
+    @include position(fixed, 0, 0, unset, 0);
+    @include displayFlex(flex, center, space-between);
+    z-index: 1;
+    height: 70px;
+    padding: $default-gap;
+    background-color: $background-color-light;
+
+    .main-header__search-container {
+        flex: 1 1 0;
+        flex-wrap: nowrap;
+    }
+
+    .main-header__search-field {
+        width: 80%;
+        max-width: 650px;
+    }
+
+    .main-header__record-button {
+        margin-left: 10px;
+    }
+
+    .main-header__account-item {
+        margin-right: 10px;
+    }
+}
