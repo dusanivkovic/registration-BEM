@@ -1,9 +1,6 @@
 <?php
 
-function price ($price, $tax) 
-{
-    echo 'Cijena s PDV: ' .$price + $price * $tax / 100 .'<br>';
-}
+require 'functions.php';
 
 if (!isset($_POST['user_name'])) 
 {
@@ -16,7 +13,8 @@ if (!isset($_POST['user_password']))
 $user_name = strtolower($_POST['user_name']);
 $user_email = strtolower($_POST['user_mail']);
 $user_password = strtolower($_POST['user_password']);
-
+$user_gender = $_POST['gender'];
+dump($user_gender);
 if ($user_name == 'dusan') 
 {
     echo 'Tax free! ' .$user_name. '<br>';

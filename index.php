@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-    <nav>
-        <ul class="space-between">
-            <?php
-                $links = ['Home' => 'index.php', 'About' => 'about.php', 'Services' => 'services.php'];
-                foreach ($links as $link => $value) : ?>
-                    <li class="main-navigation"><a href="<?php echo $value; ?>" class="main-navigation__home-link"><?php echo $link; ?></a></li>
-                <?php endforeach ?>
-        </ul>
-    </nav>
+    <?php
+    include 'partials/header.php';
+    require 'functions.php';?>
+    <div class="main-content">
+        <?php echo price(10000, 10);?>
+    </div>
+
+
     
 </body>
 </html>
