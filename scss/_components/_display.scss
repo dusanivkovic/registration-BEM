@@ -9,12 +9,18 @@
 .absolute-center {
     @include displayFlex(flex, center, center);
 }
+.space-evenly {
+    @include displayFlex (flex, center, space-evenly)
+}
 
-.absolute-center-direction-col {
+.direction-col-center {
     @include displayFlex(flex, center, center, column)
 }
 
 .position-absolute-center {
     @include position (absolute, 50%, 0, 0, 50%);
     transform: translate(-50%, -50%);
+}
+.position-relative {
+    @include position(relative, 70px, unset, unset, unset);
 }

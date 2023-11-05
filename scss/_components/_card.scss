@@ -1,0 +1,16 @@
+.card {
+    margin: $default-gap 0;
+    color: $font-color-light;
+    flex: 0 0 23%;
+    border: 1px $font-color-dark solid;
+    border-radius: 5px;
+    .card-footer, .card-header {
+        background-color: $background-color-light;
+        color: $font-color-dark;
+        width: 100%;
+        padding: .5 * $default-gap ;
+    }
+    .card-body {
+        background-color: $background-color-medium;
+    }
+}

@@ -1,11 +1,20 @@
-.button-accent {
+.btn {
     padding: 10px $default-gap;
-    background-color: $accent;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     color: $font-color-light;
 }
+.button-accent {
+    background-color: $accent;
+}
+.button-green {
+    background-color: aqua;
+}
+.button-red {
+    background-color: aqua;
+}
+
 
 .button-round {
     @include displayFlex(flex, center, center);

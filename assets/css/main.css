@@ -359,13 +359,24 @@ li {
   margin: 0 15px;
 }
 
-.button-accent {
+.btn {
   padding: 10px 15px;
-  background-color: #f22700;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   color: #fff;
+}
+
+.button-accent {
+  background-color: #f22700;
+}
+
+.button-green {
+  background-color: aqua;
+}
+
+.button-red {
+  background-color: aqua;
 }
 
 .button-round {
@@ -428,7 +439,15 @@ li {
   flex-wrap: wrap;
 }
 
-.absolute-center-direction-col {
+.space-evenly {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.direction-col-center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -443,6 +462,14 @@ li {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.position-relative {
+  position: relative;
+  top: 70px;
+  right: unset;
+  bottom: unset;
+  left: unset;
 }
 
 .user-image {
@@ -623,6 +650,23 @@ li {
 .user-block .title {
   font-weight: 600;
   color: #212121;
+}
+
+.card {
+  margin: 15px 0;
+  color: #fff;
+  flex: 0 0 23%;
+  border: 1px #606060 solid;
+  border-radius: 5px;
+}
+.card .card-footer, .card .card-header {
+  background-color: #fff;
+  color: #606060;
+  width: 100%;
+  padding: 7.5px;
+}
+.card .card-body {
+  background-color: #f8f8f8;
 }
 
 .search-field .search-field__input,

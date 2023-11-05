@@ -1,4 +1,4 @@
-<div class="position-absolute-center">
+<div class="position-absolute-center position-relative">
         <form method="POST" action="registration.php" class="absolute-center-direction-col registration-form">
             <label for="user_name" class="registration-form__label">Ime i przime</label>
             <input type="text" name="user_name" placeholder="Ime i prezime" class="input-field">
