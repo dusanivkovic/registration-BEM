@@ -16,7 +16,7 @@
         $cars = array_filter($db, function ($el) 
         {
             global $search;
-            return ($search == 'used') ?  $el['use'] == true : (($search == 'new') ? $el['use'] == false : $el['brend'] == $search || $el['price'] == $search || $el['model'] ==  $search);
+            return ($search == 'used') ?  $el['used'] == true : (($search == 'new') ? $el['used'] == false : $el['brend'] == $search || $el['price'] == $search || $el['model'] ==  $search);
         });
     }
     if (count($cars) == 0)

@@ -8,13 +8,13 @@ function dump ($val) {
 }
 function car_in_used ($used_car) 
 {
-    if ($used_car['use'])
+    if ($used_car['used'])
         return 'Used';
     return 'New';
 }
 function btn_color ($used_car) 
 {
-    if ($used_car['use'])
+    if ($used_car['used'])
         return 'button-accent';
     return 'button-green';
 }
