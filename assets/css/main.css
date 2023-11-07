@@ -654,10 +654,10 @@ li {
 
 .card {
   margin: 15px 0;
-  color: #fff;
-  flex: 0 0 23%;
+  color: #606060;
+  flex: 1 0 23%;
   border: 1px #606060 solid;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .card .card-footer, .card .card-header {
   background-color: #fff;

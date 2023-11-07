@@ -24,9 +24,9 @@
 
 ?>
 
-<div class="position-relative">
+<div class="position-relative space-between">
     <?php foreach($cars as $car): ?>
-        <div class="card">
+        <div class="card align-center">
             <div class="card-header"><?php echo $car['brend'].'<br>'.$car['model']; ?></div>
             <div class="card-body"><?php echo $car['info']; ?></div>
             <div class="card-footer space-evenly">

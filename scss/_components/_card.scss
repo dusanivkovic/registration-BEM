@@ -1,9 +1,9 @@
 .card {
     margin: $default-gap 0;
-    color: $font-color-light;
-    flex: 0 0 23%;
+    color: $font-color-dark;
+    flex: 1 0 23%;
     border: 1px $font-color-dark solid;
-    border-radius: 5px;
+    border-radius: 10px;
     .card-footer, .card-header {
         background-color: $background-color-light;
         color: $font-color-dark;
