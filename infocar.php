@@ -1,19 +1,21 @@
 <?php 
     include 'partials/header.php';
-    require 'db.php';
     require 'functions.php'; 
+    require 'config.php';
+    // require 'db.php';
+
     if (isset($_GET['id'])) 
     {
         $id = $_GET['id'];
-        $cars = array_filter($db, function ($el) 
+        $auto_arr = array_filter($cars, function ($el) use ($cars )
         {
             global $id;
-            return $el['id'] == $id;
+            return $el -> id == $id;
         });
     }elseif (isset($_GET['search-cars'])) 
     {
         $search = strtolower($_GET['search-cars']);
-        $cars = array_filter($db, function ($el) 
+        $auto_arr = array_filter($cars, function ($el) 
         {
             global $search;
             return ($search == 'used') ?  $el['used'] == true : (($search == 'new') ? $el['used'] == false : $el['brend'] == $search || $el['price'] == $search || $el['model'] ==  $search);
@@ -24,8 +26,8 @@
 
 ?>
 
-<div class="position-relative space-between">
-    <?php foreach($cars as $car): ?>
+<div class="position-relative space-between main-content">
+    <?php foreach($auto_arr as $car): ?>
         <div class="card align-center">
             <div class="card-header"><?php echo $car['brend'].'<br>'.$car['model']; ?></div>
             <div class="card-body"><?php echo $car['info']; ?></div>

@@ -1,6 +1,7 @@
 <?php 
     include 'partials/header.php'; 
-    require 'db.php'; 
+    // require 'db.php'; 
+    require 'config.php';
     require 'functions.php'
     ?>
     <main class="position-relative"> 
@@ -12,7 +13,7 @@
         </form>
     </div>
     <div class="container space-between">
-        <?php foreach($db as $car) :    ?>
+        <?php foreach($cars as $car) :    ?>
             <a href="infocar.php?id=<?php echo $car['id']; ?>">
                 <div class="card direction-col-center">
                     <div class="card-header"><?php echo $car['brend']; ?></div>

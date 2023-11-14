@@ -11,7 +11,7 @@
         <nav class="container">
             <ul class="space-between">
                 <?php
-                    $links = ['Home' => 'index.php', 'About' => 'about.php', 'Services' => 'services.php'];
+                    $links = ['Home' => 'index.php', 'Product' => 'product.php', 'Info' => 'infocar.php'];
                     foreach ($links as $link => $value) : ?>
                         <li class="main-navigation"><a href="<?php echo $value; ?>" class="main-navigation__home-link"><?php echo $link; ?></a></li>
                     <?php endforeach ?>
