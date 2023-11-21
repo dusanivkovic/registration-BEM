@@ -8,13 +8,17 @@
 </head>
 <body>
     <header class="main-header">
-        <nav class="container">
+        <nav class="container space-evenly">
             <ul class="space-between">
                 <?php
                     $links = ['Home' => 'index.php', 'Product' => 'product.php', 'Info' => 'infocar.php'];
                     foreach ($links as $link => $value) : ?>
                         <li class="main-navigation"><a href="<?php echo $value; ?>" class="main-navigation__home-link"><?php echo $link; ?></a></li>
-                    <?php endforeach ?>
+                <?php endforeach ?>
+            </ul>
+            <ul class="flex-end">
+                <li class="main-navigation "><a href="registration-user.php">Registracija</a></li>
+                <li class="main-navigation mx"><a href="login.php">Log In</a></li>
             </ul>
         </nav>
     </header>

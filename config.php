@@ -5,27 +5,47 @@ $user = 'root';
 $password = '';
 
 // Create conection
-$conn = new mysqli ($host, $user, $password, $db);
+$conn = new mysqli ($host, $user, $password, $db) or die ('connection filed: ' .$conn -> connect_error);
+$create_db = "CREATE DATABASE cars_db";
+$create_table = "CREATE TABLE cars (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    brend VARCHAR(30),
+    model VARCHAR(30),
+    price DECIMAL(10, 3),
+    used BOOLEAN,
+    info VARCHAR(400)
+)";
 
-if ($conn -> connect_error) 
-{
-    die ('connection filed: ' .$conn -> connectio_error);
-} else 
-{
-    echo 'Connection saccessfully!';
-}
+
+// if ($conn -> connect_error) 
+// {
+//     die ('connection filed: ' .$conn -> connect_error);
+// } else 
+// {
+//     echo 'Connection saccessfully!';
+// }
+
+// if ($conn -> query($create_db))
+// {
+//     echo "Create database successfuly!";
+// } else
+// {
+//     echo "Error creating database: ". $conn -> connect_error;
+// }
+
+// if ($conn -> query($create_table)) 
+// {
+//     echo "Create table successfuly!";
+// } else
+// {
+//     echo "Error creating table" . $conn -> connect_error;
+// }
+
+
+
 $select = "SELECT * FROM cars";
-$cars = $conn->query($select);
-$cars -> fetch_array(MYSQLI_ASSOC);
+$cars = $conn -> query($select);
+$cars = $cars -> fetch_all(MYSQLI_ASSOC);
 
-var_dump($cars);
-
-if ($cars -> num_rows > 0) 
-{
-    foreach ($cars as $row ) 
-    {
-        echo "id: " . $row["id"]. " - Brend: " . $row["brend"]. "- Model: " . $row["model"]. "<br>";
-    }
-} 
 // $cars -> free_result ();
-$conn -> close();
+// $conn -> close();

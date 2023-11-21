@@ -5,6 +5,9 @@
 .space-between {
     @include displayFlex(flex, center, space-between);
 }
+.flex-end {
+    @include displayFlex (flex, center, flex-end)
+}
 
 .absolute-center {
     @include displayFlex(flex, center, center);

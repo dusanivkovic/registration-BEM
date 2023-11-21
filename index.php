@@ -1,44 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
-</head>
-<body>
-    <?php
-    include 'partials/header.php';
-    require 'functions.php';?>
-    <?php 
-    include 'partials/main.php';?>
-    <div class="main-content">
-    <form method="POST" action="registration.php" class="absolute-center-direction-col registration-form">
-        <label for="user_name" class="registration-form__label">Ime i przime</label>
-        <input type="text" name="user_name" placeholder="Ime i prezime" class="input-field">
-        <label for="user_mail" class="registration-form__label">E-mail</label>
-        <input type="text" name="user_mail" placeholder="E-mail" class="input-field">
-        <label for="user_password" class="registration-form__label">Lozinka</label>
-        <input type="password" name="user_password" placeholder="Lozinka" class="input-field">
-        <label for="user_password_again" class="registration-form__label">Ponovi lozinku</label>
-        <input type="password" name="user_password_again" placeholder="Lozinka" class="input-field" class="registration-form__label">
-        <label for="year">Godina </label>
-        <select name="year" id="" class="input-field" placeholder="godina">
-            <?php 
-                for ($i = 1990; $i < 2024; $i++) : ?>
-                    <option value="<?php echo $i;?>"><?php echo $i;?></option>
-                <?php endfor ?>
-            ?>
-        </select>
-        <input type="checkbox" name="gender[]">Muski
-        <input type="checkbox" name="gender[]">Zenski
-
-        <button class="button-accent">Posalji</button>
+<?php
+require 'partials/header.php';
+?>
+<div class="main-content">
+    <h3 class="mx">Dodaj auto</h3>
+    <form action="car-registration.php" method="post" class="direction-col-center registration-form">
+        <label for="brend" class="registration-form__label">Brend</label>
+        <input type="text" name="brend" class="input-field" placeholder="Brend">
+        <label for="model" class="registration-form__label">Model</label>
+        <input type="text" name="model" class="input-field" placeholder="model">
+        <label for="price" class="registration-form__label">Cijena</label>
+        <input type="text" name="price" class="input-field" placeholder="cijena">
+        <div class="direction-col-center">
+            <span class="">Novo</span><input type="radio" name="used[]" class="input-field" value="new">
+            <span>Korisceno</span><input type="radio" name="used[]" class="input-field" value="used">
+        </div>
+        <textarea name="info" id="" cols="30" rows="10" placeholder="Unesi informacije"></textarea>
+        <button type="submit" class="btn button-green my" value="OK">OK</button>
     </form>
-        <?php echo price(10000, 10);?>
-    </div>
-
-
-    
-</body>
-</html>
+</div>

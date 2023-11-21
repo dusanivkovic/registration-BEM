@@ -1,5 +1,5 @@
 .card {
-    margin: $default-gap 0;
+    margin: $default-gap .4 * $default-gap;
     color: $font-color-dark;
     flex: 1 0 23%;
     border: 1px $font-color-dark solid;
@@ -9,8 +9,20 @@
         color: $font-color-dark;
         width: 100%;
         padding: .5 * $default-gap ;
+        column-gap: .4 * $default-gap;
     }
+    .card-header {
+        border-radius: 10px 10px 0 0;
+        @include position (relative, unset, unset, unset, unset)
+    }
+    .card-footer {border-radius: 0 0 10px 10px;}
     .card-body {
         background-color: $background-color-medium;
+    }
+    .card-header__close {
+        @include position (absolute, 5px, 5px, unset, unset);
+        color: $accent;
+        font-weight: 700;
+        cursor: pointer;
     }
 }
