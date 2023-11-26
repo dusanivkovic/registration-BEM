@@ -44,8 +44,8 @@ $create_table = "CREATE TABLE cars (
 
 
 $select = "SELECT * FROM cars";
-$cars = $conn -> query($select);
-$cars = $cars -> fetch_all(MYSQLI_ASSOC);
+$cars = ($conn -> query($select)) -> fetch_all(MYSQLI_ASSOC);
+
 
 // $cars -> free_result ();
 // $conn -> close();

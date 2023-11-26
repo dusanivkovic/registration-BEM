@@ -1,8 +1,5 @@
 <?php
-function price_pdv ($price_prod, $tax) 
-{
-    return 'Cijena s PDV: ' .$price_prod + $price_prod * $tax / 100 .'<br>';
-}
+
 function dump ($val) {
     echo var_dump ($val);
 }
@@ -23,3 +20,9 @@ function car_filter ($arr, $criteria)
     global $criteria;
     return $arr['id'] == $criteria;
 }
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }

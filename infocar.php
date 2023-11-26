@@ -38,7 +38,7 @@
             <div class="card-footer space-evenly">
                 <button class="btn button-accent"><?php echo $car['price']; ?></button>
                 <button class="btn <?php echo btn_color ($car)?>"><?php echo car_in_used ($car)?></button>
-                <button class="button-round">Uredi</button>
+                <a href="index.php?id=<?php echo $car['id']?>"><button type="submit" class="button-round">Uredi</button></a>
             </div>
         </div>
     <?php endforeach; ?>

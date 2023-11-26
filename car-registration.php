@@ -4,14 +4,14 @@ require 'functions.php';
 $brend = $_POST['brend'];
 $model = $_POST['model'];
 $price = $_POST['price'];
-$used = $_POST['used'];
+$used = ($_POST['used'][0] == 'used') ? true : false;
 $info = $_POST['info'];
 
 
 $insert_data = "INSERT INTO cars (
     brend, model, price, used, info 
 ) VALUES (
-    '$brend', '$model', '$price', '$used[0]', '$info')";
+    '$brend', '$model', '$price', '$used', '$info')";
 if ($conn -> query($insert_data)) 
 {
     echo "Data successfuly inserted into table";
