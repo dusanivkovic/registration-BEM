@@ -15,6 +15,12 @@ $create_table = "CREATE TABLE cars (
     used BOOLEAN,
     info VARCHAR(400)
 )";
+$create_table_user = "CREATE TABLE user (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(30),
+    mail VARCHAR(30),
+    user_pass VARCHAR(30)
+)";
 
 
 // if ($conn -> connect_error) 

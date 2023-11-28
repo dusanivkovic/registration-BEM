@@ -17,8 +17,8 @@
                 <?php endforeach ?>
             </ul>
             <ul class="flex-end">
-                <li class="main-navigation "><a href="registration-user.php">Registracija</a></li>
-                <li class="main-navigation mx"><a href="login.php">Log In</a></li>
+                <li class="main-navigation "><a href="registration-user.php?options=registration">Registracija</a></li>
+                <li class="main-navigation mx"><a href="registration-user.php?options=login">Log In</a></li>
             </ul>
         </nav>
     </header>

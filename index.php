@@ -10,9 +10,6 @@ if (isset($_POST['submit']))
     $price = test_input($_POST['price']);
     $info = test_input($_POST['info']);
     $used = test_input($_POST['used'][0]) == 'true' ? false: true;
-    echo ($_POST['used'][0]);
-    dump($used) ;
-    echo !test_input($_POST['used']);
     $id = test_input($_POST['id']);
     $update_car = "UPDATE cars SET brend = '$brend', model = '$model', price = '$price', used = '$used', info = '$info' WHERE id = $id";
     if ($conn -> query($update_car)) 
@@ -58,5 +55,6 @@ if (isset($_POST['submit']))
     </div>
     <?php  
 }
+require 'partials/footer.php';
 
 

@@ -1,3 +1,2 @@
-<main class="position-absolute-center position-relative">
+<main class="main-content">
 
-</main>
