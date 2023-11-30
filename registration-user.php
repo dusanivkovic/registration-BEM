@@ -13,10 +13,10 @@ require 'functions.php';
 if (isset($_GET['options'])) 
 {
     $option = test_input($_GET['options']);
-    $file = $option . '/inbdex.php';
+    $file = $option . '/index.php';
     if (file_exists($file))
     {
-        include_once ($file);
+        include ($file);
     }else 
     {
         echo 'Error 404. File not found!';
@@ -24,17 +24,7 @@ if (isset($_GET['options']))
     // dump ($file);
 }else 
 {
-?>
-    <form action="registration/index.php" method="post" class="direction-col-center registration-form">
-        <label for="user-name" class="registration-form__label">Full name</label>
-        <input type="text" name="user-name" class="input-field" placeholder="e-mail">
-        <label for="user-mail" class="registration-form__label">Your e-mail</label>
-        <input type="text" name="user-mail" class="input-field" placeholder="Name">
-        <label for="user-password" class="registration-form__label">Password</label>
-        <input type="password" name="user-password" class="input-field" placeholder="Password">
-        <button type="submit" name="submit">Submit</button>
-    </form> 
-<?php   
+    echo '';
 }
 ?>
 <?php include 'partials/footer.php'; ?>
