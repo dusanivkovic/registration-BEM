@@ -25,10 +25,7 @@
                     </div>
                 </div>
             </a>
-        <?php endforeach ?>
+        <?php endforeach;
+        $conn -> close();?>
     </div>
-    </main>
-
-    
-</body>
-</html>
+<?php require 'partials/footer.php'; 

@@ -19,8 +19,9 @@ if ($conn -> query($insert_data))
 {
     echo "Error inserting data: " .$insert_data. " Error " .$conn -> connect_error;
 }
-$conn -> close();
+
 header("location: index.php");
+$conn -> close();
 ?>
 
 <pre>

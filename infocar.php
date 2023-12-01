@@ -27,7 +27,7 @@
 
 ?>
 
-<div class="space-between main-content">
+<main class="space-between main-content">
     <?php foreach($auto_arr as $car): ?>
         <div class="card align-center">
             <div class="card-header">
@@ -41,5 +41,6 @@
                 <a href="index.php?id=<?php echo $car['id']?>"><button type="submit" class="button-round">Uredi</button></a>
             </div>
         </div>
-    <?php endforeach; ?>
-</div>
+    <?php endforeach; 
+    $conn -> close();?>
+<?php include 'partials/footer.php'; ?>

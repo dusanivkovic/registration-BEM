@@ -11,3 +11,4 @@
         echo 'Error deleting car'. $conn -> connect_error;
     }
     header('location: product.php');
+    $conn -> close();

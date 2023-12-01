@@ -19,7 +19,6 @@ if (isset($_POST['submit']))
     {
         echo "Error inserting data: " .$update_car. " Error " .$conn -> connect_error;
     }
-    $conn -> close();
     header("location: product.php");
 }elseif ($_GET['id']) 
 {
@@ -55,6 +54,7 @@ if (isset($_POST['submit']))
     </div>
     <?php  
 }
+$conn -> close();
 require 'partials/footer.php';
 
 

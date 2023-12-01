@@ -15,11 +15,12 @@ $create_table = "CREATE TABLE cars (
     used BOOLEAN,
     info VARCHAR(400)
 )";
-$create_table_user = "CREATE TABLE user (
+$create_table_user = "CREATE TABLE user_account (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(30),
-    mail VARCHAR(30),
-    user_pass VARCHAR(30)
+    e_mail VARCHAR(30),
+    user_pass VARCHAR(30),
+    date_birth DATE 
 )";
 
 
@@ -46,6 +47,15 @@ $create_table_user = "CREATE TABLE user (
 // {
 //     echo "Error creating table" . $conn -> connect_error;
 // }
+
+// if ($conn -> query($create_table_user)) 
+// {
+//     echo 'Craeting table successfuly!';
+// }else
+// {
+//     echo 'Error Createing table ' . $conn -> error;
+// }
+
 
 
 
