@@ -2,6 +2,9 @@
     include 'partials/header.php';
     require 'functions.php'; 
     require 'config.php';
+    // $select_owner = "SELECT * FROM cars WHERE user_id = '1'";
+    // $owner = ($conn -> query($select_owner)) -> fetch_array(MYSQLI_ASSOC);
+    // dump( $owner['brend']);
     if (isset($_GET['id'])) 
     {
         $id = $_GET['id'];

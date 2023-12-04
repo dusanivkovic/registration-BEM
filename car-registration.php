@@ -9,9 +9,9 @@ $info = $_POST['info'];
 
 
 $insert_data = "INSERT INTO cars (
-    brend, model, price, used, info 
+    brend, model, price, used, info ,user_id
 ) VALUES (
-    '$brend', '$model', '$price', '$used', '$info')";
+    '$brend', '$model', '$price', '$used', '$info', '1')";
 if ($conn -> query($insert_data)) 
 {
     echo "Data successfuly inserted into table";
@@ -24,6 +24,3 @@ header("location: index.php");
 $conn -> close();
 ?>
 
-<pre>
-    <?php var_dump($used); ?>
-</pre>
