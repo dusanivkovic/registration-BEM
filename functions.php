@@ -32,18 +32,3 @@ function test_input($data)
     return $data;
 }
 
-function verification_field ($field)
-{
-    if (!$field['user_name'])
-    {
-       return header("location: registration-user.php?error=user-name");
-    }
-    if (!$field['user_mail'])
-    {
-        return header("location: registration-user.php?error=user-mail");
-    }
-    if (!$field['user-password'])
-    {
-        return header("location: registration-user.php?error=user-password");
-    }
-}

@@ -1,4 +1,6 @@
 <form action="registration-user.php?options=login" method="post" class="direction-col-center registration-form">
+    <label for="user-name" class="registration-form__label">Your name</label>
+    <input type="text" name="user-name" class="input-field" placeholder="Your full name">
     <label for="user-mail" class="registration-form__label">Your e-mail</label>
     <input type="text" name="user-mail" class="input-field" placeholder="E-mail">
     <label for="user-password" class="registration-form__label">Password</label>

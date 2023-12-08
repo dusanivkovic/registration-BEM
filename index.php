@@ -3,24 +3,31 @@ require 'partials/header.php';
 require 'config.php';
 require 'functions.php';
 
-if (isset($_POST['submit']))
+$request_method = strtoupper($_SERVER['REQUEST_METHOD']);
+if ($request_method == 'POST')
 {
-    $brend = test_input($_POST['brend']);
-    $model = test_input($_POST['model']);
-    $price = test_input($_POST['price']);
-    $info = test_input($_POST['info']);
-    $used = test_input($_POST['used'][0]) == 'true' ? false: true;
-    $id = test_input($_POST['id']);
-    $update_car = "UPDATE cars SET brend = '$brend', model = '$model', price = '$price', used = '$used', info = '$info' WHERE id = $id";
-    if ($conn -> query($update_car)) 
+    if (isset($_POST['submit']))
     {
-        echo "Data successfuly updated!";
-    } else
-    {
-        echo "Error inserting data: " .$update_car. " Error " .$conn -> connect_error;
+        $brend = test_input($_POST['brend']);
+        $model = test_input($_POST['model']);
+        $price = test_input($_POST['price']);
+        $info = test_input($_POST['info']);
+        $used = $_POST['used'][0] == 'false' ? 1 : 0; 
+        $id = test_input($_POST['id']);
+        $update_car = "UPDATE cars SET brend = '$brend', model = '$model', price = '$price', used = '$used', info = '$info' WHERE id = $id";
+        if ($conn -> query($update_car)) 
+        {
+            echo "Data successfuly updated!";
+            // dump($used) ;
+            header("location: product.php");
+        } else
+        {
+            echo "Error inserting data: " .$update_car. " Error " .$conn -> connect_error;
+        }
+
     }
-    header("location: product.php");
-}elseif ($_GET['id']) 
+}
+elseif ($_GET['id']) 
 {
     $curently_id = $_GET['id'];
     $selected_car_for_update = "SELECT * FROM cars WHERE id = '$curently_id'";

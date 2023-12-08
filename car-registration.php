@@ -4,7 +4,7 @@ require 'functions.php';
 $brend = $_POST['brend'];
 $model = $_POST['model'];
 $price = $_POST['price'];
-$used = ($_POST['used'][0] == 'used') ? true : false;
+$used = ($_POST['used'][0] == 'false') ? 1 : 0;
 $info = $_POST['info'];
 
 
