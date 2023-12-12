@@ -12,7 +12,7 @@ if ($request_method == 'POST')
         $model = test_input($_POST['model']);
         $price = test_input($_POST['price']);
         $info = test_input($_POST['info']);
-        $used = $_POST['used'][0] == 'false' ? 1 : 0; 
+        $used = $_POST['used'][0] ? 0 : 1; 
         $id = test_input($_POST['id']);
         $update_car = "UPDATE cars SET brend = '$brend', model = '$model', price = '$price', used = '$used', info = '$info' WHERE id = $id";
         if ($conn -> query($update_car)) 
@@ -47,7 +47,7 @@ elseif ($_GET['id'])
                 <span>Korisceno</span><input type="radio" name="used[]" class="input-field" value="<?php echo $curently_car['used'] ? 'true' : 'false'; ?>" <?php echo $curently_car['used'] ? 'checked': '' ;?>>
             </div>
             <textarea name="info" id="" cols="30" rows="10" placeholder="<?php echo $curently_car['info']?>"></textarea>
-            <input type="text" name='id' value = "<?php echo $curently_car['id'];?>">
+            <input type="hidden" name='id' value = "<?php echo $curently_car['id'];?>">
             <input type="submit" name="submit" class="btn button-green my" value="OK">
         </form>
     </div>

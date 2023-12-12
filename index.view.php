@@ -1,3 +1,4 @@
+
 <form action="car-registration.php" method="post" class="direction-col-center registration-form">
     <label for="brend" class="registration-form__label">Brend</label>
     <input type="text" name="brend" class="input-field" placeholder="Brend">

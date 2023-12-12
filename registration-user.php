@@ -9,6 +9,8 @@ const EMAIL_REQUIRED = 'Please enter your email';
 const EMAIL_INVALID = 'Please enter a valid email';
 const PASSWORD_CONFIRM = 'Your password must match';
 const NAME_INVALID = 'Please enter a valid name';
+const PASSWORD_REQUIRED = 'Please enter your password';
+const PASSWORD_INVALID = 'Please enter leaset 8 characters';
 $errors = [];
 $request_method = strtoupper($_SERVER['REQUEST_METHOD']);
 if ($request_method == 'GET')
@@ -49,6 +51,17 @@ if ($request_method == 'GET')
         if ($_GET['error'] == 'name_invalid')
         {
             $errors['name'] = NAME_INVALID;
+            echo $errors['name'];
+        }
+        if ($_GET['error'] == 'password_required')
+        {
+            $errors['password'] = PASSWORD_REQUIRED;
+            echo $errors['password'];
+        }
+        if ($_GET['error'] == 'password_invalid')
+        {
+            $errors['password'] = PASSWORD_INVALID;
+            echo $errors['password'];
         }
     }
 }elseif ($request_method == 'POST')
@@ -59,7 +72,7 @@ if ($request_method == 'GET')
     if ($user_mail) {
         // validate email
         $user_mail = filter_var($user_mail, FILTER_VALIDATE_EMAIL);
-        if ($user_mail === false) {
+        if (!$user_mail) {
             header('location: registration-user.php?error=email_invalid');
             $errors['email'] = '';
         }
@@ -78,6 +91,18 @@ if ($request_method == 'GET')
             header('location: registration-user.php?error=name_invalid');
             $errors['name'] = '';
         }
+    }
+    if ($user_password) 
+    {
+        if (strlen($user_password) < 8)
+        {
+            header('location: registration-user.php?error=password_invalid');
+            $errors['password'] = '';
+        }
+    }else
+    {
+        header('location: registration-user.php?error=password_required');
+        $errors['password'] = '';
     }
 
     if (count($errors) == 0)
