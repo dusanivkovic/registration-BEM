@@ -127,8 +127,16 @@ if ($request_method == 'GET')
             }
         }elseif (isset($_POST['login']))
         {
-
-            echo $user_password;
+            $selected_query = "SELECT * FROM user_account WHERE user_pass = '$user_password' AND full_name = '$user_name' AND e_mail = '$user_mail'";
+            if ($conn -> query($selected_query) && ($conn -> query($selected_query)) -> num_rows > 0)
+            {
+                $selected_user = ($conn -> query($selected_query) )-> fetch_array(MYSQLI_ASSOC);
+                echo 'Wellcome'. $selected_user['full_name']. '!';
+                dump($conn -> query($selected_query) -> fetch_row());
+            }else
+            {
+                echo 'User does not exsist ' . $conn -> error;
+            }
         }
     }
 }

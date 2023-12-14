@@ -1,7 +1,7 @@
 <?php
 
 function dump ($val) {
-    echo var_dump ($val);
+    echo '<pre>'.var_dump ($val).'</pre>';
 }
 
 function car_in_used ($used_car) 
